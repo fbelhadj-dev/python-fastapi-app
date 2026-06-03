@@ -1,7 +1,9 @@
-from fastapi import FastAPI
+import uvicorn
 
-from .router import router
+from .config import Config
 
-app = FastAPI()
-
-app.include_router(router)
+uvicorn.run(
+    "app.app:app",
+    host=Config.HOST,
+    port=Config.PORT,
+)

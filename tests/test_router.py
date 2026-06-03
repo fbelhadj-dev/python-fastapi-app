@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
 from fastapi.testclient import TestClient
-from app.main import app
+from app.app import app
 
 client = TestClient(app)
 
